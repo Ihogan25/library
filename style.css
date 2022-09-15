@@ -51,6 +51,7 @@ h1 {
     text-align: center;
     font-size: 4rem;
     color: white;
+
 }
 body {
     background-image: url(background.jpg);
@@ -58,18 +59,21 @@ body {
     background-size: cover;
 }
 .container {
-    height: 100vh;
-    width: 100vh;
+    height: 140vh;
+    width: 120vh;
     background-color: white;
     margin: 2em auto;
     border-radius: 5px;
     border: 5px solid black;
+    display: grid;
+    grid-template-rows: 10% 90%;
 }
+
 
 .info {
-    border: 1px solid black;
-
+    height: 10rem;
 }
+
 .new {
     font-size: 1.5em;
     background-color: royalblue;
@@ -81,10 +85,120 @@ body {
     text-align: center;
     padding: 0;
 }
-.books{
-
+.info button:hover {
+    opacity: 50%;
 }
 
+.books {
+    display: flex;
+    justify-content: flex-start;
+    flex: 2;
+    flex-wrap: wrap;
+    align-items:stretch;
+    justify-content: space-evenly;
+    margin: 0 .5em;
+    gap: 1em;
+    row-gap: 0;
+}
 .book {
+    border: 1px solid black;
+    height: 13rem;
+    width: 10rem;
+    text-align: center;
+    border-radius: 5px;
+    border-top: 10px solid royalblue;
+}
+
+.book:hover {
+    background-color: rgb(225, 225, 225) ;
     
+}
+.book button {
+    background-color: inherit;
+    border: none;
+    margin: auto;
+    cursor: pointer;
+    display: block;
+    
+}
+
+.book button:hover {
+    color: red;
+}
+
+.book img {
+    height: 50%;
+    width: 50%;
+}
+
+.form{
+    text-decoration: none;
+    color: white;
+}
+
+form {
+    opacity: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    height: 100%;
+    position:absolute;
+    color: black;
+    background-color: white;
+    height: 30rem;
+    width: 20%;
+    right: 79.3%;
+    top: 18%;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+h2 {
+    height: 2rem;
+    color: white;
+}
+
+form input {
+    margin-bottom: 3em;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+form label {
+    font-size: 1.5em;
+}
+
+#submit {
+    width: 10em;
+    height: 4em;
+    background-color: royalblue;
+    color: white;   
+    margin-bottom: .5em;
+}
+
+#submit:hover {
+    background-color: green;
+}
+
+form button {
+    width: 10em;
+    height: 4em;
+    background-color: royalblue;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    width: 100%;
+    padding: inherit;
+}
+
+form button:hover {
+    background-color: red;
 }
