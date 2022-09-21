@@ -24,12 +24,23 @@ const form = {
     readYes: document.getElementById("readYes")
 }
 
-form.readNo.addEventListener("click", function(){
-    form.readNo.setAttribute("checked", true)
-})
-form.readYes.addEventListener("click", function(){
-    form.readYes.setAttribute("checked", true)
-})
+// form.readNo.addEventListener("click", function(){
+//     if(form.readNo.checked === true) {
+//         form.readNo.checked = false
+//     }
+//     else if(form.readNo.checked === false) {
+//         form.readNo.checked = true;
+//     }
+// })
+
+// form.readYes.addEventListener("click", function(){
+//     if(form.readYes.checked === false) {
+//         form.readYes.checked = true
+//     }
+//     else if(form.readYes.checked === true) {
+//         form.readYes.checked = false;
+//     } 
+// })
 
 
 function newBook(title,author,pages,read) {
@@ -52,9 +63,13 @@ const displayBooks =(ev)=> {
         <p>Author: ${book.author}</p>
         <p>Pages: ${book.pages}</p>
         <label>Read: </label>
-        <input type="checkbox" class="read" value="${book.read}">
+        <input type="checkbox" class="read">
         <button id="rm-btn">X</button>
         `;
+        if(book.read === true) {
+            
+        }
+        cover.children[4].checked = book.read
         library.appendChild(cover);
     })
     for(let i = 0; i < books.length; i++) {
@@ -67,13 +82,14 @@ const displayBooks =(ev)=> {
 const addBook = (ev) => {
     ev.preventDefault();
     let read;
-    if(form.readNo.checked === 'checked' && form.readYes.checked === ''){
+    if(form.readNo.checked === true && form.readYes.checked === false){
         read = false
     }
-    else if(form.readNo.checked === '' && form.readYes.checked === 'checked') {
+    else if(form.readNo.checked === false && form.readYes.checked === true) {
         read = true
     }
-    const book = new newBook(form.title.value, form.author.value, read);
+    const book = new newBook(form.title.value, form.author.value, form.pages.value, read);
+    console.log(book.read)
     books.push(book);
 }
 
@@ -101,6 +117,8 @@ const clearForm = function(ev) {
     form.title.value = '';
     form.author.value = '';
     form.pages.value = '';
+    form.readNo.checked = false;
+    form.readYes.checked = false;
     let formDom = document.getElementById("formDom");
     formDom.style.display = "none";
 }
