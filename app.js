@@ -96,6 +96,7 @@ const addBook = (ev) => {
 
 const removeBook = () => {
     let rmBtns = document.querySelectorAll("#rm-btn");
+    let numBooks = document.getElementById("num-books");
     rmBtns.forEach(btn => {
         btn.addEventListener("click", function(){
             console.log(library.length);
@@ -109,6 +110,7 @@ const removeBook = () => {
                 books.splice(library.children[btn.dataset.index],1);
                 library.removeChild(library.children[btn.dataset.index]);
             }   
+            numBooks.innerHTML = `Number of books: ${books.length}`;
 })})
 }
 
