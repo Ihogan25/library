@@ -80,6 +80,7 @@ const displayBooks =(ev)=> {
 }
 
 const addBook = (ev) => {
+    let numBooks = document.getElementById("num-books");
     ev.preventDefault();
     let read;
     if(form.readNo.checked === true && form.readYes.checked === false){
@@ -89,7 +90,6 @@ const addBook = (ev) => {
         read = true
     }
     const book = new newBook(form.title.value, form.author.value, form.pages.value, read);
-    console.log(book.read)
     books.push(book);
     numBooks.innerHTML = `Number of books: ${books.length}`;
 }
@@ -100,7 +100,6 @@ const removeBook = () => {
     let numBooks = document.getElementById("num-books");
     rmBtns.forEach(btn => {
         btn.addEventListener("click", function(){
-            console.log(library.length);
             for(let i = 0; i < books.length; i++) {
                 let child = library.children[i];
                 library.children[i].dataset.index = i;
