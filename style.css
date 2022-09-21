@@ -53,152 +53,66 @@ h1 {
     color: white;
 
 }
+
+
+
 body {
-    background-image: url(background.jpg);
-    background-repeat: 0;
-    background-size: cover;
-}
-.container {
-    height: 140vh;
-    width: 120vh;
-    background-color: white;
-    margin: 2em auto;
-    border-radius: 5px;
-    border: 5px solid black;
-    display: grid;
-    grid-template-rows: 10% 90%;
-}
-
-
-.info {
-    height: 10rem;
-}
-
-.new {
-    font-size: 1.5em;
-    background-color: royalblue;
+    background-color: black;
     color: white;
-    border-radius: 5px;
-    border: 1px solid white;
-    margin: 0 auto;
-    width: 100%;
     text-align: center;
-    padding: 0;
-}
-.info button:hover {
-    opacity: 50%;
+    height: 120vh;
 }
 
-.books {
+.library {
     display: flex;
-    justify-content: flex-start;
-    flex: 2;
+    height: 80vh;
+    width: 60%;
+    border: 5px solid white;
+    border-radius: 10px;
+    background-color: rgb(203, 227, 247);
+    margin: 5px auto;
+    justify-content: center;
+    gap: 1rem;
     flex-wrap: wrap;
-    align-items:stretch;
-    justify-content: space-evenly;
-    margin: 0 .5em;
-    gap: 1em;
-    row-gap: 0;
+    overflow: hidden;
 }
+
+.formDom{
+    display: none;
+    flex-direction: column;
+    width: 20%;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background-color: black;
+    border: 5px solid white;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 .book {
     border: 1px solid black;
-    height: 13rem;
-    width: 10rem;
-    text-align: center;
-    border-radius: 5px;
-    border-top: 10px solid royalblue;
+    height: 6em;
+    width: 8rem;
 }
 
-.book:hover {
-    background-color: rgb(225, 225, 225) ;
-    
-}
 .book button {
-    background-color: inherit;
-    border: none;
-    margin: auto;
-    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
     display: block;
-    
+    margin: 0 auto;
 }
 
 .book button:hover {
-    color: red;
+   color: red;
+   background-color: white;
+   border: white;
+   cursor: pointer;
 }
 
-.book img {
-    height: 50%;
-    width: 50%;
-}
-
-.form{
-    text-decoration: none;
-    color: white;
-}
-
-form {
-    opacity: 0%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    height: 100%;
-    position:absolute;
-    color: black;
-    background-color: white;
-    height: 30rem;
-    width: 20%;
-    right: 79.3%;
-    top: 18%;
-    border: 3px solid black;
-    border-radius: 5px;
-}
-
-h2 {
-    height: 2rem;
-    color: white;
-}
-
-form input {
-    margin-bottom: 3em;
-    border-radius: 5px;
-    background-color: white;
-    cursor: pointer;
-}
-
-form label {
-    font-size: 1.5em;
-}
-
-#submit {
-    width: 10em;
-    height: 4em;
-    background-color: royalblue;
-    color: white;   
-    margin-bottom: .5em;
-}
-
-#submit:hover {
-    background-color: green;
-}
-
-form button {
-    width: 10em;
-    height: 4em;
-    background-color: royalblue;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-button a {
-    text-decoration: none;
-    color: white;
-    height: 100%;
-    width: 100%;
-    padding: inherit;
-}
-
-form button:hover {
-    background-color: red;
+.read {
+    margin: 0;
 }
