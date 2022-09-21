@@ -91,6 +91,7 @@ const addBook = (ev) => {
     const book = new newBook(form.title.value, form.author.value, form.pages.value, read);
     console.log(book.read)
     books.push(book);
+    numBooks.innerHTML = `Number of books: ${books.length}`;
 }
 
 
