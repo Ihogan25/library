@@ -24,30 +24,14 @@ const form = {
     readYes: document.getElementById("readYes")
 }
 
-// form.readNo.addEventListener("click", function(){
-//     if(form.readNo.checked === true) {
-//         form.readNo.checked = false
-//     }
-//     else if(form.readNo.checked === false) {
-//         form.readNo.checked = true;
-//     }
-// })
 
-// form.readYes.addEventListener("click", function(){
-//     if(form.readYes.checked === false) {
-//         form.readYes.checked = true
-//     }
-//     else if(form.readYes.checked === true) {
-//         form.readYes.checked = false;
-//     } 
-// })
-
-
-function newBook(title,author,pages,read) {
+class newBook{
+    constructor(title, author, pages, read){
     this.title = title;
     this.author  = author;
     this.pages = pages;     
     this.read = read; 
+    }
 }
 
 const displayBooks =(ev)=> {
